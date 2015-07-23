@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = [NSArray arrayWithObjects:@"Some blog post", @"Some other blog post", @"Another blog post", nil];
+    self.design = [NSArray arrayWithObjects:@"design", nil];
+    self.development = [NSArray arrayWithObjects:@"development", nil];
+    self.mobile = [NSArray arrayWithObjects:@"mobile", nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -37,21 +39,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     // Return the number of sections.
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return self.titles.count;
+    
+    return YES;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
-    
+    cell.textLabel.text = [self.design objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.development objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.mobile objectAtIndex:indexPath.row];
+
     return cell;
 }
 

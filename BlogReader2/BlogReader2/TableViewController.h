@@ -10,6 +10,8 @@
 
 @interface TableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *titles;
+@property (strong, nonatomic) NSArray *design;
+@property (strong, nonatomic) NSArray *development;
+@property (strong, nonatomic) NSArray *mobile;
 
 @end
