@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *blogPost1 = [[NSDictionary alloc] initWithObjectsAndKeys:@"Some blog post", @"A", @"Some other blog post", @"B", @"Another blog post", @"C", nil];
+    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post", @"A", @"Some other blog post", @"B", @"Another blog post", @"C", nil];
     
     NSLog(@"%@", blogPost1);
     
