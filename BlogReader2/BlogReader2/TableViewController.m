@@ -18,11 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post", @"A", @"Some other blog post", @"B", @"Another blog post", @"C", nil];
+    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post", @"title", @"Joe", @"author", nil];
     
-    NSLog(@"%@", blogPost1);
+    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post2", @"title", @"Amy", @"author",  nil];
     
-    self.titles = [NSArray arrayWithObjects:@"Some blog post", @"Some other blog post", @"Another blog post", nil];
+    NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post3", @"title", @"Zelda", @"author",  nil];
+    
+    
+    self.blogPosts = [NSArray arrayWithObjects:blogPost1, blogPost2, blogPost3, nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -47,14 +50,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return self.titles.count;
+    return self.blogPosts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
+    cell.textLabel.text = [blogPost valueForKey:@"title"];
+    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
     
     return cell;
 }
