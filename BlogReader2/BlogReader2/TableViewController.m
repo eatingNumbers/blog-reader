@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSDictionary *blogPost1 = [[NSDictionary alloc] initWithObjectsAndKeys:@"Some blog post", @"A", @"Some other blog post", @"B", @"Another blog post", @"C", nil];
+    
+    NSLog(@"%@", blogPost1);
+    
     self.titles = [NSArray arrayWithObjects:@"Some blog post", @"Some other blog post", @"Another blog post", nil];
     
     // Uncomment the following line to preserve selection between presentations.
