@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CBBF83C1B62CB1000D40230 /* iu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3CBBF83B1B62CB1000D40230 /* iu.jpeg */; };
 		3CDF20561B6201F400019C54 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF20551B6201F400019C54 /* BlogPost.m */; };
 		3CFCC5D51B616A8D0048956C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCC5D41B616A8D0048956C /* main.m */; };
 		3CFCC5D81B616A8D0048956C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCC5D71B616A8D0048956C /* AppDelegate.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CBBF83B1B62CB1000D40230 /* iu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iu.jpeg; sourceTree = "<group>"; };
 		3CDF20541B6201F400019C54 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		3CDF20551B6201F400019C54 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		3CFCC5CF1B616A8D0048956C /* BlogReader2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogReader2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			children = (
 				3CFCC5D31B616A8D0048956C /* Info.plist */,
 				3CFCC5D41B616A8D0048956C /* main.m */,
+				3CBBF83B1B62CB1000D40230 /* iu.jpeg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CFCC5FC1B616BE70048956C /* MainStoryboard.storyboard in Resources */,
+				3CBBF83C1B62CB1000D40230 /* iu.jpeg in Resources */,
 				3CFCC5E31B616A8D0048956C /* LaunchScreen.xib in Resources */,
 				3CFCC5E01B616A8D0048956C /* Images.xcassets in Resources */,
 			);
