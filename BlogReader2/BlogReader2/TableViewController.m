@@ -18,14 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post", @"title", @"Joe", @"author", nil];
+    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
-    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post2", @"title", @"Amy", @"author",  nil];
+    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     
-    NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"Some blog post3", @"title", @"Zelda", @"author",  nil];
+    NSError *error = nil;
     
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    self.blogPosts = [NSArray arrayWithObjects:blogPost1, blogPost2, blogPost3, nil];
+    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
