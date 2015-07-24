@@ -18,16 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
+    NSURL *blogURL = [NSURL URLWithString:@"http//ajax.googleapis.com/ajax/services/search/web?v=1.0&q=JSON"];
     
     NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     
     NSError *error = nil;
     
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+//    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
-    
+    self.blogPosts = [dataArray arrayByAddingObject:@"results"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,7 +62,7 @@
     NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    cell.detailTextLabel.text = [blogPost valueForKey:@"content"];
     
     return cell;
 }
