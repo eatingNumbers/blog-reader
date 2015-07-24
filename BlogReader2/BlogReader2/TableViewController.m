@@ -24,10 +24,9 @@
     
     NSError *error = nil;
     
-//    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    self.blogPosts = [dataArray arrayByAddingObject:@"results"];
+    self.blogPosts = [dataDictionary objectForKey:@"results"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
