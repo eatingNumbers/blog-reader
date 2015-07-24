@@ -19,14 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BlogPost *blogPost = [[BlogPost alloc] init];
-    blogPost.title = @"some title";
-//    [blogPost setTitle:@"some title"]; //this is the same method above. 
+    BlogPost *bp = [[BlogPost alloc] initWithTitle:@"some Title"];
+    bp.author = @"Author";
     
-    NSString *string = blogPost.title;
-    
-    
-    NSLog(@"%@", blogPost);
+    BlogPost *bp1 = [BlogPost blogPostWithTitle:@"another title"];
+    bp1.author = @"Dean";
     
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
