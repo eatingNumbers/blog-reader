@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "AppDelegate.h"
+#import "BlogPost.h"
 
 @interface TableViewController ()
 
@@ -17,6 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    BlogPost *blogPost = [[BlogPost alloc] init];
+    blogPost.title = @"some title";
+//    [blogPost setTitle:@"some title"]; //this is the same method above. 
+    
+    NSString *string = blogPost.title;
+    
+    
+    NSLog(@"%@", blogPost);
     
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
