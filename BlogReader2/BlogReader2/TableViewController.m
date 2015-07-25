@@ -35,6 +35,7 @@
     for (NSDictionary *bpDictionary in blogPostsArray) {
         BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
         blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
         [self.blogPosts addObject:blogPost];
     }
     
@@ -65,12 +66,16 @@
     return self.blogPosts.count;
 }
 
-//This method is where you can programmatically add an image or any visual object. 
+//This method is where you can programmatically add an image or any visual object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"iu.jpeg"];
+    NSLog(@"%@", blogPost.thumbnail);
+    NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    cell.imageView.image = image;
     cell.textLabel.text = blogPost.title;
     cell.detailTextLabel.text = blogPost.author;
     
