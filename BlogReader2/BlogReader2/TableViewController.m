@@ -71,11 +71,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    NSLog(@"%@", blogPost.thumbnail);
+    if ([blogPost.thumbnail isKindOfClass:[NSString class]]) {
+        
     NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
     UIImage *image = [UIImage imageWithData:imageData];
     
     cell.imageView.image = image;
+    } else {
+        
+        cell.imageView.image = [UIImage imageNamed:@"iu.jpeg"];
+    }
+    
     cell.textLabel.text = blogPost.title;
     cell.detailTextLabel.text = blogPost.author;
     
