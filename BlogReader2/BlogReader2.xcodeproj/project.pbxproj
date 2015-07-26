@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4710711B658F63001350AE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4710701B658F63001350AE /* WebViewController.m */; };
 		3CBBF83C1B62CB1000D40230 /* iu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3CBBF83B1B62CB1000D40230 /* iu.jpeg */; };
 		3CDF20561B6201F400019C54 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF20551B6201F400019C54 /* BlogPost.m */; };
 		3CFCC5D51B616A8D0048956C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCC5D41B616A8D0048956C /* main.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C47106F1B658F63001350AE /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3C4710701B658F63001350AE /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3CBBF83B1B62CB1000D40230 /* iu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iu.jpeg; sourceTree = "<group>"; };
 		3CDF20541B6201F400019C54 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		3CDF20551B6201F400019C54 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				3CFCC6011B616DDC0048956C /* TableViewController.m */,
 				3CDF20541B6201F400019C54 /* BlogPost.h */,
 				3CDF20551B6201F400019C54 /* BlogPost.m */,
+				3C47106F1B658F63001350AE /* WebViewController.h */,
+				3C4710701B658F63001350AE /* WebViewController.m */,
 				3CFCC5FB1B616BE70048956C /* MainStoryboard.storyboard */,
 				3CFCC5DF1B616A8D0048956C /* Images.xcassets */,
 				3CFCC5E11B616A8D0048956C /* LaunchScreen.xib */,
@@ -229,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CFCC5D81B616A8D0048956C /* AppDelegate.m in Sources */,
+				3C4710711B658F63001350AE /* WebViewController.m in Sources */,
 				3CFCC6021B616DDC0048956C /* TableViewController.m in Sources */,
 				3CFCC5D51B616A8D0048956C /* main.m in Sources */,
 				3CDF20561B6201F400019C54 /* BlogPost.m in Sources */,

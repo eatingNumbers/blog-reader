@@ -90,12 +90,9 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    UIApplication *application = [UIApplication sharedApplication];
-    [application openURL:blogPost.url];
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Preparing for segue: %@",segue.identifier);
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
