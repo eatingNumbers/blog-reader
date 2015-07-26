@@ -52,15 +52,11 @@
         <scene sceneID="qfy-LO-Ya8">
             <objects>
                 <viewController id="IKe-pL-8mB" customClass="WebViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fme-Wh-KeI"/>
-                        <viewControllerLayoutGuide type="bottom" id="5OA-X1-tnu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="J7H-A6-N2D">
+                    <webView key="view" contentMode="scaleToFill" id="sWZ-fh-Yz7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                    </webView>
                     <navigationItem key="navigationItem" id="saI-ci-hOO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgc-f1-gKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
