@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 //#import "AppDelegate.h"
 #import "BlogPost.h"
+#import "WebViewController.h"
 
 @interface TableViewController ()
 
@@ -92,6 +93,14 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Preparing for segue: %@",segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"showBlogPost"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+//        WebViewController *wbc = (WebViewController *)segue.destinationViewController;
+//        wbc.blogPostURL = blogPost.url;
+        [segue.destinationViewController setBlogPostURL:blogPost.url];
+    }
 }
 /*
 // Override to support conditional editing of the table view.
